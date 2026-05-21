@@ -343,12 +343,16 @@ button:hover {
   <br>
 </div>
 
+<br>
 <div class="mainText">
   <div class="mainText_text">
     <h2>The <b>Sven Files</b></h2>
     <p>The <b>Sven Files</b> are a collection of accuses against <b>Sven</b>. <br>
     The accusements have withneses or proof attatched to them. the proof will be names or nicknames of the witneses or an image.</p>
   </div>
+</div>
+
+  
   
 <div id="results"></div>
   
@@ -444,6 +448,29 @@ search.addEventListener("input", () => {
 
   renderResults(filtered);
 
+});
+</script>
+  
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+function toggleGames() {
+  document.getElementById("gamesMenu").classList.toggle("show");
+}
+
+/* click outside to close */
+document.addEventListener("click", function(event) {
+
+  let menu = document.getElementById("menu");
+  let games = document.getElementById("gamesMenu");
+  let button = document.querySelector(".menuButton");
+
+  if (!menu.contains(event.target) && !button.contains(event.target)) {
+    menu.classList.remove("show");
+    games.classList.remove("show");
+  }
 });
 </script>
 
