@@ -13,7 +13,6 @@
   
   
 .mainText {
-  display: flex;
   gap: 20px;
 }
 
@@ -48,8 +47,8 @@ body {
 
 .searchBar {
 width: 175px;
-height: 45px;
-display: flex;
+height: 50px;
+
 align-items: left;
 justify-content: space-between;
 }
@@ -222,7 +221,11 @@ button:hover {
 
 
 /* MOBILE MODE */
-@media (max-width: 450px) {
+@media (max-width: 900px) {
+
+  .FE_Text{
+    display: none;
+  }
 
   .menuButton {
     display: block;
@@ -342,7 +345,6 @@ button:hover {
   </div>
   <br>
 </div>
-
 <br>
 <div class="mainText">
   <div class="mainText_text">
@@ -350,9 +352,7 @@ button:hover {
     <p>The <b>Sven Files</b> are a collection of accuses against <b>Sven</b>. <br>
     The accusements have withneses or proof attatched to them. the proof will be names or nicknames of the witneses or an image.</p>
   </div>
-</div>
-
-  
+ </div>
   
 <div id="results"></div>
   
@@ -450,7 +450,7 @@ search.addEventListener("input", () => {
 
 });
 </script>
-  
+
 <script>
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
